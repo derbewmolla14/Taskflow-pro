@@ -1,6 +1,26 @@
 let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
 
 //day two   UPDATE
+// function renderTasks() {
+//   const list = document.getElementById("taskList");
+//   list.innerHTML = "";
+
+//   tasks.forEach((task, index) => {
+//     const li = document.createElement("li");
+
+//     li.innerHTML = `
+//       ${task}
+//       <button onclick="deleteTask(${index})">Delete</button>
+//     `;
+
+//     list.appendChild(li);
+//   });
+// }
+
+// DAY THREE Update app.js
+
+//let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+/*
 function renderTasks() {
   const list = document.getElementById("taskList");
   list.innerHTML = "";
@@ -15,7 +35,10 @@ function renderTasks() {
 
     list.appendChild(li);
   });
+
+  localStorage.setItem("tasks", JSON.stringify(tasks));
 }
+
 
 function addTask() {
   const input = document.getElementById("taskInput");
@@ -36,33 +59,11 @@ function deleteTask(index) {
 renderTasks();
 
 
+*/
 
 
-// DAY THREE Update app.js
-
-/*let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
-
-function renderTasks() {
-  const list = document.getElementById("taskList");
-  list.innerHTML = "";
-
-  tasks.forEach((task, index) => {
-    const li = document.createElement("li");
-
-    li.innerHTML = `
-      ${task}
-      <button onclick="deleteTask(${index})">Delete</button>
-    `;
-
-    list.appendChild(li);
-  });
-
-  localStorage.setItem("tasks", JSON.stringify(tasks));
-}
-
-
-📅 DAY 4 — Mark Complete
-Update app.js
+//📅 DAY 4 — Mark Complete
+//Update app.js
 
 function renderTasks() {
   const list = document.getElementById("taskList");
@@ -93,6 +94,11 @@ function addTask() {
   tasks.push({ text: input.value, done: false });
   input.value = "";
 
+//   function deleteTask(index) {
+//   tasks.splice(index, 1);
+//   renderTasks();
+// }
+
   renderTasks();
 }
 
@@ -101,7 +107,7 @@ function toggleDone(index) {
   renderTasks();
 }
 
-
+/*
 
 📅 DAY 5 — Filter Tasks
 Add in HTML
