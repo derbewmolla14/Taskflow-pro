@@ -60,7 +60,7 @@ renderTasks();
 
 
 */
-
+/*
 
 //📅 DAY 4 — Mark Complete
 //Update app.js
@@ -107,15 +107,15 @@ function toggleDone(index) {
   renderTasks();
 }
 
-/*
+/*/
 
-📅 DAY 5 — Filter Tasks
-Add in HTML
+//📅 DAY 5 — Filter Tasks
+/*Add in HTML
 <button onclick="filterTasks('all')">All</button>
 <button onclick="filterTasks('done')">Done</button>
 <button onclick="filterTasks('todo')">Todo</button>
-
-Update JS
+*/
+//Update JS
 let filter = "all";
 
 function filterTasks(type) {
@@ -152,7 +152,7 @@ function renderTasks() {
   localStorage.setItem("tasks", JSON.stringify(tasks));
 }
 
-📅 DAY 6 — Dark Mode
+/*📅 DAY 6 — Dark Mode
 Add in HTML
 <button onclick="toggleTheme()">🌙</button>
 
