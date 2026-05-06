@@ -1,107 +1,213 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>8 Things to Improve</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #667eea, #764ba2);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SaaS Stack Horizontal View</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --folder-bg: #1e293b;
+            --accent: #38bdf8;
+            --text-main: #f1f5f9;
+            --text-dim: #94a3b8;
+        }
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
 
-    .card {
-      background: white;
-      padding: 20px;
-      border-radius: 20px;
-      width: 360px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-    }
+        h1 {
+            text-align: center;
+            color: var(--accent);
+            margin-bottom: 30px;
+        }
 
-    .title {
-      font-weight: bold;
-      font-size: 20px;
-      margin-bottom: 15px;
-      text-align: center;
-      color: #333;
-    }
+        /* The Horizontal Container */
+        .stack-container {
+            display: flex;
+            flex-direction: row; /* Horizontal flow */
+            gap: 20px;
+            overflow-x: auto; /* Enable horizontal scrolling */
+            padding-bottom: 20px;
+            padding-top: 10px;
+            scroll-behavior: smooth;
+        }
 
-    .item {
-      padding: 12px;
-      border-radius: 12px;
-      margin: 10px 0;
-      color: white;
-    }
+        /* Individual Folder Cards */
+        .folder {
+            background: var(--folder-bg);
+            border: 1px solid #334155;
+            border-radius: 8px;
+            min-width: 200px;
+            flex-shrink: 0;
+            padding: 15px;
+            transition: transform 0.2s;
+        }
 
-    .en {
-      font-weight: bold;
-    }
+        .folder:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent);
+        }
 
-    .am {
-      font-size: 14px;
-      opacity: 0.9;
-    }
+        .folder-name {
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            border-bottom: 1px solid #334155;
+            padding-bottom: 8px;
+        }
 
-    .c1 { background: #ff6b6b; }
-    .c2 { background: #feca57; color: black; }
-    .c3 { background: #48dbfb; color: black; }
-    .c4 { background: #1dd1a1; }
-    .c5 { background: #5f27cd; }
-    .c6 { background: #ff9ff3; color: black; }
-    .c7 { background: #54a0ff; }
-    .c8 { background: #00d2d3; color: black; }
+        .items-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
 
-  </style>
+        .item {
+            color: var(--text-dim);
+            padding: 5px 0;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.95rem;
+        }
+
+        .item:before {
+            content: "┣";
+            color: #475569;
+        }
+
+        .item:last-child:before {
+            content: "┗";
+        }
+
+        /* Custom Scrollbar */
+        .stack-container::-webkit-scrollbar {
+            height: 8px;
+        }
+        .stack-container::-webkit-scrollbar-track {
+            background: #1e293b;
+            border-radius: 10px;
+        }
+        .stack-container::-webkit-scrollbar-thumb {
+            background: #475569;
+            border-radius: 10px;
+        }
+        .stack-container::-webkit-scrollbar-thumb:hover {
+            background: var(--accent);
+        }
+    </style>
 </head>
 <body>
 
-<div class="card">
-  <div class="title">🔥 8 Things to Improve / ማሻሻል ያለባቸው 8 ነገሮች</div>
+    <h1>📂 SaaS Stack Dashboard</h1>
 
-  <div class="item c1">
-    <div class="en">1. Self-confidence</div>
-    <div class="am">1. ራስ እምነት</div>
-  </div>
+    <div class="stack-container">
+        
+        <!-- Frontend -->
+        <div class="folder">
+            <div class="folder-name">📂 Frontend</div>
+            <ul class="items-list">
+                <li class="item">React</li>
+                <li class="item">NextJS</li>
+                <li class="item">Vue</li>
+                <li class="item">TailwindCSS</li>
+                <li class="item">Shadcn UI</li>
+            </ul>
+        </div>
 
-  <div class="item c2">
-    <div class="en">2. Time management</div>
-    <div class="am">2. ጊዜ አስተዳደር</div>
-  </div>
+        <!-- Backend -->
+        <div class="folder">
+            <div class="folder-name">📂 Backend</div>
+            <ul class="items-list">
+                <li class="item">NodeJS</li>
+                <li class="item">Django</li>
+                <li class="item">Laravel</li>
+                <li class="item">FastAPI</li>
+                <li class="item">Express</li>
+            </ul>
+        </div>
 
-  <div class="item c3">
-    <div class="en">3. Communication skills</div>
-    <div class="am">3. የመግባባት ችሎታ</div>
-  </div>
+        <!-- Database -->
+        <div class="folder">
+            <div class="folder-name">📂 Database</div>
+            <ul class="items-list">
+                <li class="item">PostgreSQL</li>
+                <li class="item">MySQL</li>
+                <li class="item">MongoDB</li>
+                <li class="item">Redis</li>
+                <li class="item">Supabase</li>
+            </ul>
+        </div>
 
-  <div class="item c4">
-    <div class="en">4. Discipline</div>
-    <div class="am">4. ዲሲፕሊን</div>
-  </div>
+        <!-- Auth -->
+        <div class="folder">
+            <div class="folder-name">📂 Auth</div>
+            <ul class="items-list">
+                <li class="item">Clerk</li>
+                <li class="item">Auth0</li>
+                <li class="item">Firebase</li>
+                <li class="item">Supabase Auth</li>
+                <li class="item">BetterAuth</li>
+            </ul>
+        </div>
 
-  <div class="item c1">
-  <div class="en">5. Persuasion skill</div>
-  <div class="am">5. ሰዎችን የማስመን ጥበብ</div>
-</div>
+        <!-- Payments -->
+        <div class="folder">
+            <div class="folder-name">📂 Payments</div>
+            <ul class="items-list">
+                <li class="item">Stripe</li>
+                <li class="item">Paddle</li>
+                <li class="item">Dodo Payments</li>
+                <li class="item">Lemon Squeezy</li>
+                <li class="item">Polar</li>
+            </ul>
+        </div>
 
-  <div class="item c6">
-    <div class="en">6. Hard work</div>
-    <div class="am">6. ትጋት</div>
-  </div>
+        <!-- Emails -->
+        <div class="folder">
+            <div class="folder-name">📂 Emails</div>
+            <ul class="items-list">
+                <li class="item">Resend</li>
+                <li class="item">SendGrid</li>
+                <li class="item">Mailgun</li>
+                <li class="item">Postmark</li>
+                <li class="item">Amazon SES</li>
+            </ul>
+        </div>
 
-  <div class="item c7">
-    <div class="en">7. Focus</div>
-    <div class="am">7. ትኩረት</div>
-  </div>
+        <!-- Deployment -->
+        <div class="folder">
+            <div class="folder-name">📂 Deployment</div>
+            <ul class="items-list">
+                <li class="item">Vercel</li>
+                <li class="item">Netlify</li>
+                <li class="item">Railway</li>
+                <li class="item">Render</li>
+                <li class="item">AWS</li>
+            </ul>
+        </div>
 
-  <div class="item c8">
-    <div class="en">8. Patience</div>
-    <div class="am">8. ትዕግስት</div>
-  </div>
+        <!-- AI Integration -->
+        <div class="folder">
+            <div class="folder-name">📂 AI Integration</div>
+            <ul class="items-list">
+                <li class="item">OpenAI API</li>
+                <li class="item">Anthropic API</li>
+                <li class="item">Replicate</li>
+                <li class="item">HuggingFace</li>
+                <li class="item">Gemini API</li>
+            </ul>
+        </div>
 
-</div>
+    </div>
 
 </body>
 </html>

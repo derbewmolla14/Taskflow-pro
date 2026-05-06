@@ -152,17 +152,17 @@ function renderTasks() {
   localStorage.setItem("tasks", JSON.stringify(tasks));
 }
 
-/*📅 DAY 6 — Dark Mode
-Add in HTML
-<button onclick="toggleTheme()">🌙</button>
+//📅 DAY 6 — Dark Mode
+//Add in HTML
+//<button onclick="toggleTheme()">🌙</button>
 
-Add CSS
-<style>
-body.dark {
-  background: black;
-  color: white;
-}
-</style>
+// //Add CSS
+// <style>
+// body.dark {
+//   background: black;
+//   color: white;
+// }
+// </style>
 
 
 // JAVASCRIPT
@@ -170,7 +170,7 @@ function toggleTheme() {
   document.body.classList.toggle("dark");
 }
 
-
+/*
 📅 DAY 7 — Simple Styling Upgrade
 Replace HTML style
 
