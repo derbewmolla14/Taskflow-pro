@@ -1,21 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>TaskFlow Pro</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TaskFlow App</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<fieldset class="fieldset">
-<h1>🚀 TaskFlow Pro</h1>
 
-<input id="taskInput" placeholder="Enter task">
-<button onclick="addTask()">Add</button>
-<button onclick="toggleTheme()">🌙</button>
-<ul id="taskList"></ul>
-<button onclick="filterTasks('all')">All</button>
-<button onclick="filterTasks('done')">Done</button>
-<button onclick="filterTasks('todo')">Todo</button>
-<script src="app.js"></script>
-</fieldset>
+  <div class="container">
+    <h1>TaskFlow</h1>
+
+    <div class="task-input">
+      <input type="text" id="taskInput" placeholder="Enter a task...">
+      <button onclick="addTask()">Add</button>
+    </div>
+
+    <ul id="taskList"></ul>
+  </div>
+
+  <script src="/app.js"></script>
 </body>
 </html>
